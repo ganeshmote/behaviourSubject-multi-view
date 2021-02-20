@@ -1,0 +1,35 @@
+.btn-add{
+    font-size: 13px;
+    font-weight: 700;
+    color: black;
+}
+.btn-add i{
+    font-size: 33px;
+    line-height: 12px;
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    margin-right: 3px;
+}
+.btn-add:hover{
+    border: 1px solid #007bff;
+    background: #fff;
+    color:#007bff;
+
+}
+
+
+.myRecForm.INVALID{
+    border: 1px solid red;
+    box-shadow: 0 0  31px  #ff000038;
+}
+
+.myRecForm.PENDING{
+    border: 1px solid yellow;
+    box-shadow: 0 0  31px  #e5f509f6 !important;
+}
+
+.myRecForm.VALID{
+    border: 1px solid green;
+    box-shadow: 0 0  31px  #ff000038 !important;
+}

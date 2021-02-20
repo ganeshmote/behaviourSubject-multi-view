@@ -1,0 +1,143 @@
+<!-- <div class="container bg-pink">
+  <div class="col-md-12">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-left bg-white rounded shadow my-3">
+    <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+      <div ngModelGroup="userDetail" #userDetail="ngModelGroup">
+      <div class="form-group">
+        <label for="username">*Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" [(ngModel)]="username" required autocomplete="off "> 
+<small *ngIf="username">your username is {{username}}</small>
+<button class="btn-primary btn-sm mt-2" (click)="setUsername()">Set Username</button>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Add</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Email id" name="email" ngModel required email #email="ngModel">
+        <small class="text-danger" *ngIf="!email.valid && email.touched">Please Enter Valid  Email</small>
+      </div>
+      <span *ngIf="!userDetail.valid && userDetail.touched" class="text-danger"> enter valid details</span>
+    </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter pass" name="password" ngModel required>
+      </div>
+      <div class="form-group ">
+        <label for="course">Select cource</label>
+        <select class="form-control" id="course" name="course" [ngModel]="defaultCourse">
+          <option value="Angular">Angular</option>
+          <option value="Html">Html</option>
+          <option value="Javascript">Javascript</option>
+        </select>
+        <div class="form-group"> 
+          <div class="custom-control custom-radio" *ngFor="let gender of genders">
+            <input type="radio" class="custom-control-input" id="{{gender.id}}" name="gender" value="{{gender.value}}" [(ngModel)]="defaultGender">
+            <label class="custom-control-label" for="{{gender.id}}">{{gender.value}}</label>
+          </div>
+
+        </div>
+      </div>
+      <button type="submit" [disabled]="!myForm.valid" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+</div>
+<div class="row justify-content-center mt-2" *ngIf="submitted"> 
+  <div class="col-md-6 text-left bg-white rounded shadow my-3">
+    <h2>Form Data</h2>
+    <p>Username:</p>
+    <p>email:</p>
+    <p>course:</p>
+    <p>gender:</p>
+  </div>
+</div>
+</div> -->
+
+
+
+<!-- 
+
+
+<div class="container bg-pink">
+    <div class="col-md-12">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-left bg-white rounded shadow my-3 myRecForm" [ngClass]="formStatus">
+          <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit() ">
+            <div formGroupName="userDetail">
+              <div class="form-group">
+                <label for="username">*Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username"
+                  formControlName="username">
+                  <small class="text-danger"
+                  *ngIf="!myReactiveForm.get('userDetail.username').valid && myReactiveForm.get('userDetail.username').touched">
+                  <span *ngIf="myReactiveForm.get('userDetail.username').errors['required']"> Username is not valid </span>
+                 <span *ngIf="myReactiveForm.get('userDetail.username').errors['nameIsNotAllowed']">{{myReactiveForm.get('userDetail.username').value }} not allowed </span> 
+                </small>
+  
+  
+              </div>
+              <div class="form-group">
+                <label for="email">Email Add</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email id" formControlName="email">
+                <small class="text-danger"
+                  *ngIf="!myReactiveForm.get('userDetail.email').valid && myReactiveForm.get('userDetail.email').touched">Enter valid Email
+                  add</small>
+  
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter pass"
+                formControlName="password">
+            </div>
+            <div class="form-group ">
+              <label for="course">Select cource</label>
+              <select class="form-control" id="course" formControlName="course">
+                <option value="Angular">Angular</option>
+                <option value="Html">Html</option>
+                <option value="Javascript">Javascript</option>
+              </select>
+              </div>
+  
+              <div class="form-group">
+                <div class="custom-control custom-radio" *ngFor="let gender of genders">
+                  <input type="radio" class="custom-control-input " id="{{gender.id}}" formControlName="gende"
+                    value="{{gender.value}}">
+                  <label class="custom-control-label" for="{{gender.id}}">{{gender.value}}</label>
+                </div>
+  
+              </div>
+              <div class="form-group" formArrayName="skills">
+                <label >*Skills</label>
+                <ng-container *ngFor="let skill of getControls(); index as i">
+                <input type="text" autocomplete="off" formControlName="{{i}}" class="form-control mt-2" id="skills" placeholder="Enter Skills"
+                >
+              </ng-container>
+                <button (click)="onAddSkills()" class="btn btn-light btn-sm mt-3 btn-add"> <i>+</i> Add skills</button>
+  
+  
+              </div>
+  
+            
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div> -->
+  
+    <!-- <div class="row justify-content-center mt-2" *ngIf="submitted"> 
+      <div class="col-md-6 text-left bg-white rounded shadow my-3">
+        <h2>Form Data</h2>
+        <p>Username:</p>
+        <p>email:</p>
+        <p>course:</p>
+        <p>gender:</p>
+      </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+  
+  
+  
+  
+  <!-- <router-outlet></router-outlet> -->
