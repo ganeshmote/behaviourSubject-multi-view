@@ -1,0 +1,40 @@
+<header>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="block left">
+                <a href="#"><img src="/assets/images/logo.jpeg" width="50%" height="50%"></a>
+         
+                    <a routerLink="{{goBackLink.url}}" class="back" *ngIf="goBackLink.text">
+                        <i class="fas fa-chevron-left"></i>{{goBackLink.text}}
+                    </a>
+                   
+            </div>
+
+            <div class="block center">
+                <app-menu *ngIf="headerNav"></app-menu>
+            </div>
+            <div class="block right">
+                <ng-container *ngIf="headerLoginBlock">
+
+                    <button *ngIf="!loggedInUser" class="btn btn-outline-primary" routerLink="login">Sign In</button>
+                    <ul *ngIf="loggedInUser">
+                        <li>
+                            Welcome<strong class="text-primary">{{loggedInUser}}</strong>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" (click)="onLogout()"> <i class="fas fa-unlock"></i>Logout</a>
+                        </li>
+                    </ul>
+
+                </ng-container>
+
+                <div class="contact-details" *ngIf="headerContactDetails">
+                    <a href="mailto:moteganesh10@gmail.com"><i class="fas fa-envelope"></i>moteganesh10@gmail.com </a>
+                    <a href="mailto:moteganesh10@gmail.com"><i class="fas fa-phone"></i>7264909961 </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>

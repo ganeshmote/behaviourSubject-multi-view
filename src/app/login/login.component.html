@@ -1,0 +1,15 @@
+<div class="page-area w-100">
+    <form class="form-signin">
+        <img class="mb-4" src="/assets/images/logo.jpeg" alt="" width="200" class="mt-4 mb-3">
+        <h1 class="h4 mb-3 font-weight-normal">Please sign in!</h1>
+        <input type="text" #username id="inputEmail" class="form-control mb-3" placeholder="Enter your Username" required=true>
+        <input type="password" #password id="inputPassword" class="form-control" placeholder="Enter Password" required=true>
+<div class="checkbox my-3">
+    <label>
+        <input type="checkbox" value="remember-me">Remember me
+    </label>
+</div>
+<button (click)="loggedIn(username,password)" class="btn btn-success btn-block" type="button">Sign In</button>
+<p class="mt-5 mb-3 text-muted">2018-2019</p>
+    </form>
+</div>

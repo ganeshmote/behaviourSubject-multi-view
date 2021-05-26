@@ -1,0 +1,25 @@
+<div class="row container-fluid">
+<div>
+
+    <h1 class="header">Our Product</h1>
+    <h2>
+        confirm having received the laptop as per specifications mentioned above. I also declare that I have read,
+        understood and agree to abide by the conditions listed above.
+    </h2>
+</div>
+<hr>
+<div class="col-md-12 px-5 py-5">
+    <h1>Our Gallery </h1>
+  </div>
+  <div class="row img-gallery px-5">
+    <div class="col-md-3" *ngFor="let item of galleryImages">
+      
+      <a class="item" routerLink="{{item.id}}">
+        <figure>
+          <img src="{{item.imgUrl}}" >
+          <h6>{{item.title}}</h6>
+        </figure>
+      </a>
+    </div>
+  </div>
+</div>

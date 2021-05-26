@@ -7,24 +7,24 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  item:any;
-  // ans1=[{info:"",ans:[]}];
-  info:any;
-  index:any;
-
+  item: any;
+  v;
+  
+  info: any;
+  index: any;
+  a = {};
   suggested = []
 
   other_options = ['banana', 'strawberry', 'mango', 'apple', 'pears', 'grapes']
   myReactiveForm: FormGroup;
-  
+
 
   answer = [
     {
       group: 'Suggested',
-      
-      items:this.suggested,
-      // items:[{infos:"",ans1:[]}],
-      
+
+      items: this.suggested,
+
     },
     {
       group: 'other options',
@@ -40,37 +40,55 @@ export class AppComponent {
       'info': new FormControl(null),
 
     });
+    // this.myReactiveForm.valueChanges.subscribe((res) => console.log(res))
   }
 
-  onSubmit() {
-    console.log(this.myReactiveForm);
-    this.item = this.myReactiveForm.get('ans').value
-    this.info = this.myReactiveForm.get('info').value
-
-    if (this.suggested.indexOf(this.item) == -1) {
-      this.suggested.push(this.item)
-      // this.answer[1].items=this.suggested.slice(-2,).reverse()
-
-    } else {
-      this.index = this.suggested.indexOf(this.item)
-      this.suggested.splice(this.index, 1)
-      this.suggested.push(this.item)
-      // this.answer[1].items=this.suggested.slice(-2,).reverse()
-
-    }
+  onInput(event) {
+    this.v = event.target.value
 
     this.answer = [
       {
         group: 'Suggested',
-        items: this.suggested.slice(-2,).reverse(),
+        items: this.a[this.v]
+        // .slice(-2,).reverse(),
       },
       {
         group: 'other options',
         items: this.other_options,
       },
     ];
-    // this.ans1.push({info:this.myReactiveForm.get('info').value,ans:[ this.myReactiveForm.get('info').value]})
+    console.log(this.answer)
 
+  }
+
+
+  onSubmit() {
+
+
+  
+    this.item = this.myReactiveForm.get('ans').value
+    this.info = this.myReactiveForm.get('info').value
+    this.index = this.suggested.indexOf(this.item)
+    if (!this.a.hasOwnProperty(this.info)) {
+      this.a[this.info] = [this.item]
+    }
+    else {
+
+      if (this.a[this.info].indexOf(this.item) == -1) {
+        this.a[this.info].push(this.item)
+
+      } else {
+        this.a[this.info].splice(this.index, 1)
+        this.a[this.info].push(this.item)
+      
+      }
+    }
+    // console.log(this.a)
+
+    if (this.other_options.indexOf(this.item) !== -1) {
+      this.other_options.splice(this.other_options.indexOf(this.item), 1)
+
+    }
 
   }
 }
