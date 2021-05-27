@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appTestapp]'
@@ -12,14 +12,18 @@ export class TestappDirective {
   //   this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', color)
   // }
 
+
+@HostBinding('style.backgroundColor') bgColor="green"
+
 @HostListener('click') myClick(){
-  this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', 'blue')
+  // this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', 'blue')
+  this.bgColor='blue';
 }
 
 @HostListener('mouseover') myMouseOver(){
-  this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', 'red')
+  // this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', 'red')
 }
 @HostListener('mouseout') myMouseOut(){
-  this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', 'yellow')
+  // this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', 'yellow')
 }
 }
