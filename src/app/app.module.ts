@@ -20,6 +20,7 @@ import { MobilelapComponent } from './mobilelap/mobilelap.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
+import { TestappDirective } from './appDirectives/testapp.directive';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MenuComponent } from './menu/menu.component';
     HeaderComponent,
     FooterComponent,
     MenuComponent,
+    TestappDirective,
   
   
   ],
