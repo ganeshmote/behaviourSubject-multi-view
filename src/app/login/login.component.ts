@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeaderService } from '../appServices/header.service';
 
@@ -13,6 +13,15 @@ export class LoginComponent implements OnInit {
   loggedInUser;
   ngOnInit(): void {
   }
+
+ @HostListener("click") myclick(){
+  alert("i love you Nirmala");
+}
+
+@HostListener("window:scroll",['$event'])myScrolling(){
+  console.log('gneshNirmala');
+
+}
   loggedIn(username, password) {
     var uName=username.value;
     var passWord=password.value;
