@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MobilelapComponent } from './mobilelap/mobilelap.component';
 import { ProductsComponent } from './products/products.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,8 @@ const routes: Routes = [
 },
 {path:'home',component:HomeComponent},
 {path:'contact',component:ContactsComponent},
+{path:'template',component:TemplateDrivenComponent},
+// {path:'reactive',component:ReactiveFormComponent},
 ];
 
 @NgModule({
