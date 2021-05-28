@@ -14,9 +14,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
- @HostListener("click") myclick(){
-  alert("i love you Nirmala");
-}
+//  @HostListener("click") myclick(){
+//   alert("i love you Nirmala");
+// }
 
 @HostListener("window:scroll",['$event'])myScrolling(){
   console.log('gneshNirmala');
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   loggedIn(username, password) {
     var uName=username.value;
     var passWord=password.value;
-    if (passWord= "123") {
+    if (passWord=="123") {
 
       this._header.loggedInUser.next(uName);
       this.router.navigate(['home']);
