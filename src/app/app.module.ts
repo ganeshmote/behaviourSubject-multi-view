@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { FormsModule } from '@angular/forms';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -37,7 +37,7 @@ import { TestappDirective } from './appDirectives/testapp.directive';
     FooterComponent,
     MenuComponent,
     TestappDirective,
-    // ReactiveFormComponent,
+    ReactiveFormComponent,
     TemplateDrivenComponent
   
   

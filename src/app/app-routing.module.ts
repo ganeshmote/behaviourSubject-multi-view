@@ -26,7 +26,7 @@ const routes: Routes = [
 {path:'home',component:HomeComponent},
 {path:'contact',component:ContactsComponent},
 {path:'template',component:TemplateDrivenComponent},
-// {path:'reactive',component:ReactiveFormComponent},
+{path:'reactive',component:ReactiveFormComponent},
 ];
 
 @NgModule({

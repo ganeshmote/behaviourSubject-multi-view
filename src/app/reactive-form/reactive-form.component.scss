@@ -11,3 +11,35 @@ select.ng-invalid.ng-touched{
     border: 1px solid red ;
     box-shadow: 0 0 13px inset rgb(180, 84, 84);
 }
+.btn-add{
+    font-size: 13px;
+    font-weight: 700;
+    color: black;
+}
+.btn-add i {
+    font-size: 33px;
+    line-height: 12px;
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    margin-right: 3px;
+}
+
+.btn-add:hover{
+    border: 1px solid #007bff;
+}
+
+.myRecForm.INVALID{
+    border: 1px solid red ;
+    box-shadow: 0 0 13px inset rgb(180, 84, 84);
+}
+
+.myRecForm.VALID{
+    border: 1px solid rgb(13, 212, 79) ;  
+    box-shadow: 0 0 13px inset rgb(180, 84, 84)   !important;
+}
+
+.myRecForm.PENDING{
+    border: 1px solid rgb(238, 222, 80);
+    box-shadow: 0 0 13px inset rgb(180, 84, 84) !important;
+}
