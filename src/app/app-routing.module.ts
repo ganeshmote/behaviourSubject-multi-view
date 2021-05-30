@@ -6,6 +6,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryitemComponent } from './galleryitem/galleryitem.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ManageProductsComponent } from './manage-products/manage-products.component';
+import { ManageUserComponent } from './manage-user/manage-user.component';
 import { MobilelapComponent } from './mobilelap/mobilelap.component';
 import { ProductsComponent } from './products/products.component';
 
@@ -23,6 +25,8 @@ const routes: Routes = [
 },
 {path:'home',component:HomeComponent},
 {path:'contact',component:ContactsComponent},
+{path:'prod',component:ManageProductsComponent},
+{path:'users',component:ManageUserComponent},
 ];
 
 @NgModule({

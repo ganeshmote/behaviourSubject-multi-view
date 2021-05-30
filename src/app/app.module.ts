@@ -20,7 +20,9 @@ import { MobilelapComponent } from './mobilelap/mobilelap.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
-
+import { ManageProductsComponent } from './manage-products/manage-products.component';
+import { ManageUserComponent } from './manage-user/manage-user.component';
+import{HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +37,8 @@ import { MenuComponent } from './menu/menu.component';
     HeaderComponent,
     FooterComponent,
     MenuComponent,
+    ManageProductsComponent,
+    ManageUserComponent,
   
   
   ],
@@ -44,7 +48,8 @@ import { MenuComponent } from './menu/menu.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
     // MaterialModule
   ],
   providers: [GalleryItems],
