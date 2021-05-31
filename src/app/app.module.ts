@@ -21,6 +21,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { TestappDirective } from './appDirectives/testapp.directive';
+import { ManageProductsComponent } from './manage-products/manage-products.component';
+import { ManageUserComponent } from './manage-user/manage-user.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,10 @@ import { TestappDirective } from './appDirectives/testapp.directive';
     MenuComponent,
     TestappDirective,
     ReactiveFormComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    ManageProductsComponent,
+    ManageUserComponent,
+    
   
   
   ],
