@@ -1,1 +1,66 @@
-<p>manage-user works!</p>
+
+<div class="page-area">
+    <h2 class="text-center">Manage Products</h2>
+    <br>
+    <div class="container border-top pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Add User</h2>
+                <form #userForm="ngForm" (ngSubmit)="onAddUser(userForm.value)">
+                  
+                    <div class="form-group">
+                        <label for="name">User Name </label>
+                        <input type="text" class="form-control" id="name" autocomplete="off" name="name" ngModel required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Technology Use </label>
+                        <input type="text" class="form-control" id="id" autocomplete="off" name="technology" ngModel required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2" >{{editMode? 'Update User':'Add User'}}</button>
+                    <button type="button" class="btn btn-warning mr-2" >Fetch User</button>
+              <!-- <button type="button" class="btn btn-primary" (click)="onAddProduct(id,name,price)">{{editMode? 'Update User':'Add User' }}</button> -->
+              <!-- <button type="button" class="btn btn-success mx-2" (click)="onSaveProduct()">Save Product</button>
+              <button type="button" class="btn btn-warning" (click)="onFetchProduct()">Fetch Product</button> -->
+                </form>
+
+            </div>
+            <div class="col-md-6">
+          
+               
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Technolgy</th>
+                        
+                            <th scope="col" class="text-center">Edit</th>
+                            <th scope="col" class="text-center">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody  >
+                        <tr *ngFor="let user of users; index as i">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{user.name}}</td>
+                            <td>{{user.technology}}</td>
+                            
+                            <td (click)="onEditUser(user.userId,i)"> <a class="text-danger"> <i class="far fa-edit"></i>Edit</a> </td>
+                            <td (click)="onDeleteUser(user.userId)"> <a class="text-danger"> <i class="far fa-trash-alt"></i>Delete</a> </td> 
+                        </tr>
+                    </tbody>
+
+                </table>
+                <!-- <div *ngIf="fetching" class="text-center">
+                    <div class="spinner-before text-warning" role="status">
+                        <span class="sr-only">Loading..</span>
+                    </div>
+                    Fetching Products...</div> -->
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
