@@ -23,6 +23,7 @@ import { MenuComponent } from './menu/menu.component';
 import { TestappDirective } from './appDirectives/testapp.directive';
 import { ManageProductsComponent } from './manage-products/manage-products.component';
 import { ManageUserComponent } from './manage-user/manage-user.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ManageUserComponent } from './manage-user/manage-user.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
     // MaterialModule
   ],
   providers: [GalleryItems],
